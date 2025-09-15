@@ -1,0 +1,28 @@
+# Python virtual environment
+rasavenv/
+
+# Bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rasa-specific files
+.rasa/
+models/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.tar.gz
+
+# IDE files
+.vscode/
+.idea/

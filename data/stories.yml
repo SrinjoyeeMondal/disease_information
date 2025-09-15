@@ -1,0 +1,39 @@
+version: "3.1"
+
+stories:
+
+- story: Ask about a disease then symptoms
+  steps:
+    - intent: ask_disease_info
+      entities:
+        - disease: covid-19
+    - action: action_provide_disease_info
+    - intent: ask_symptoms
+    - action: action_provide_disease_info
+
+- story: Ask about a disease then prevention
+  steps:
+    - intent: ask_disease_info
+      entities:
+        - disease: malaria
+    - action: action_provide_disease_info
+    - intent: ask_prevention
+    - action: action_provide_disease_info
+
+- story: Ask about a disease then treatment
+  steps:
+    - intent: ask_disease_info
+      entities:
+        - disease: cholera
+    - action: action_provide_disease_info
+    - intent: ask_treatment
+    - action: action_provide_disease_info
+
+- story: Affirm after info
+  steps:
+    - intent: ask_disease_info
+      entities:
+        - disease: dust allergy
+    - action: action_provide_disease_info
+    - intent: affirm
+    - action: action_provide_disease_info

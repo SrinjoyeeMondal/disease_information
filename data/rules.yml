@@ -1,0 +1,45 @@
+version: "3.1"
+
+rules:
+
+- rule: Provide disease information
+  steps:
+  - intent: ask_disease_info
+  - action: action_provide_disease_info
+
+- rule: Show symptoms after user asks
+  steps:
+  - intent: ask_symptoms
+  - action: action_provide_disease_info
+
+- rule: Show prevention after user asks
+  steps:
+  - intent: ask_prevention
+  - action: action_provide_disease_info
+
+- rule: Show treatment after user asks
+  steps:
+  - intent: ask_treatment
+  - action: action_provide_disease_info
+
+- rule: Show more info
+  steps:
+  - intent: ask_more_info
+  - action: action_provide_disease_info
+
+- rule: Show emergency tips
+  steps:
+  - intent: emergency_tips
+  - action: action_provide_disease_info
+
+# ✅ NEW: Handle YES (affirm) after asking about more info
+- rule: User wants more info after general info
+  steps:
+  - intent: affirm
+  - action: action_provide_disease_info
+
+# ✅ NEW: Handle NO (deny) after asking about more info
+- rule: User does not want more info after general info
+  steps:
+  - intent: deny
+  - action: action_provide_disease_info

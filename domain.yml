@@ -1,0 +1,70 @@
+version: "3.1"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - ask_disease_info
+  - ask_symptoms
+  - ask_prevention
+  - ask_treatment
+  - ask_more_info
+  - emergency_tips
+  - affirm          # <--- Added for YES
+  - deny            # <--- Added for NO
+  - nlu_fallback
+
+entities:
+  - disease
+
+slots:
+  disease:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: disease
+
+responses:
+  utter_greet:
+    - text: "Hello! 👋 I am your health assistant.\n\nPlease tell me the disease you’d like to know about."
+
+  utter_goodbye:
+    - text: "Goodbye! Stay healthy."
+
+  utter_fallback:
+    - text: "I couldn't understand that. Please specify a disease name."
+
+  utter_ask_disease:
+    - text: "Which disease would you like to know more about?"
+
+  utter_symptoms:
+    - text: "Symptoms of {disease} include …"
+
+  utter_prevention:
+    - text: "Prevention tips for {disease} include …"
+
+  utter_treatment:
+    - text: "Treatment for {disease} includes …"
+
+  utter_more_info:
+    - text: "Here’s more information about {disease} …"
+
+  utter_emergency_tips:
+    - text: "Emergency tips for {disease}: …"
+
+  # New responses for YES/NO handling
+  utter_ask_if_more_info:
+    - text: "Would you like to know more about this disease?"
+
+  utter_ask_more_about_disease:
+    - text: "What would you like to know more about this disease?"
+
+  utter_thanks_for_chatting:
+    - text: "Thanks for chatting!"
+
+actions:
+  - action_provide_disease_info

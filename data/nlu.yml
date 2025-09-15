@@ -1,0 +1,174 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - hlw
+    - hlw bot
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - take care
+
+- intent: ask_disease_info
+  examples: |
+    - I want to know about [COVID-19](disease)
+    - Tell me about [malaria](disease)
+    - Give me information on [cholera](disease)
+    - Tell me about [cholera](disease)
+    - Information about [malaria](disease)
+    - I want to know about [cholera](disease)
+    - Tell me about [uti](disease)
+    - Tell me about [chronic](disease)
+    - Tell me about [gastric](disease)problems
+    - Tell me about [migraine](disease)
+    - Tell me about [cancer](disease)
+    - Tell me about [dust allergy](disease)
+    - Tell me about [drug allergy](disease)
+    - Tell me about [food allergy](disease)
+    - Tell me about [pollen allergy](disease)
+    - Tell me about [insect allergy](disease)
+    - Tell me about [skin contact allergy](disease)
+
+- intent: ask_symptoms
+  examples: |
+    - What are the symptoms of [COVID-19](disease)?
+    - Tell me the symptoms of [malaria](disease)
+    - Symptoms of [cholera](disease)
+    - What are the symptoms?
+    - Symptoms?
+    - Tell me the symptoms
+    - Symptoms of [uti](disease)
+    - Symptoms of [chronic](disease)
+    - Symptoms of [gastric](disease)
+    - Symptoms of [migraine](disease)
+    - Symptoms of [cancer](disease)
+    - Symptoms of [dust allergy](disease)
+    - Symptoms of [drug allergy](disease)
+    - Symptoms of [food allergy](disease)
+    - Symptoms of [pollen allergy](disease)
+    - Symptoms of [insect allergy](disease)
+    - Symptoms of [skin contact allergy](disease)
+
+- intent: ask_prevention
+  examples: |
+    - How to prevent [COVID-19](disease)?
+    - Prevention tips for [malaria](disease)
+    - How can I avoid [cholera](disease)?
+    - Prevention tips for [uti](disease)
+    - Prevention tips for [chronic](disease)
+    - Prevention tips for [gastric](disease)
+    - Prevention tips for [migraine](disease)
+    - Prevention tips for [cancer](disease)
+    - Prevention tips for [dust allergy](disease)
+    - Prevention tips for [food allergy](disease)
+    - Prevention tips for [drug allergy](disease)
+    - Prevention tips for [pollen allergy](disease)
+    - Prevention tips for [insect allergy](disease)
+    - Prevention tips for [skin contact allergy](disease)    
+    - How to prevent it?
+    - Prevention tips?
+    - How can I avoid it?
+
+- intent: ask_treatment
+  examples: |
+    - Treatment for [COVID-19](disease)
+    - How to treat [malaria](disease)
+    - Remedies for [cholera](disease)
+    - How to treat [uti](disease)
+    - Remedies for [chronic](disease)
+    - How to treat [gastric](disease)
+    - Remedies for [migraine](disease)
+    - How to treat [cancer](disease)
+    - Remedies for [dust allergy](disease)
+    - Remedies for [food allergy](disease)
+    - Remedies for [drug allergy](disease)
+    - Remedies for [pollen allergy](disease)
+    - Remedies for [insect allergy](disease)
+    - Remedies for [skin contact allergy](disease)
+    - Treatment?
+    - How to treat it?
+    - Remedies?
+    - cure
+
+- intent: ask_more_info
+  examples: |
+    - More info on [COVID-19](disease)
+    - Tell me more about [malaria](disease)
+    - Information about [cholera](disease)
+    - More information on [uti](disease)
+    - Tell me more about [chronic](disease)
+    - Information about [gastric](disease)
+    - Tell me more about [migraine](disease)
+    - Information about [cancer](disease)
+    - Information about [dust allergy](disease)
+    - Information about [food allergy](disease)
+    - Information about [drug allergy](disease)
+    - Information about [pollen allergy](disease)
+    - Information about [insect allergy](disease)
+    - Information about [skin contact allergy](disease)
+    - More info?
+    - Tell me more about it
+
+- intent: emergency_tips
+  examples: |
+    - Information at emergency about [food allergy](disease)
+    - Information at emergency about [drug allergy](disease)
+    - Information at emergency about [pollen allergy](disease)
+    - Information at emergency about [insect allergy](disease)
+    - Information at emergency about [skin contact allergy](disease)
+    - Information at emergency about [dust allergy](disease)
+    - Information at emergency about [malaria](disease)
+    - Information at emergency about [COVID-19](disease)
+    - Information at emergency about [cancer](disease)
+    - Information at emergency about [gastric](disease)
+    - Information at emergency about [migraine](disease)
+    - Information at emergency about [uti](disease)
+    - Information at emergency about [chronic](disease)
+   
+    - Information at emergency about [cholera](disease)
+    - Emergency tips?
+    - What to do in emergency?
+
+# ✅ NEW: Affirm intent for YES replies
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - yup
+    - sure
+    - of course
+    - ok
+    - absolutely
+    - definitely
+    - please do
+    - i would like to know more
+    - yes please
+
+# ✅ NEW: Deny intent for NO replies
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - no thanks
+    - not now
+    - no please
+    - don't want
+    - i am fine
+    - that's all
+    - stop
+
+- intent: nlu_fallback
+  examples: |
+    - asdf
+    - I don't know
+    - random text
