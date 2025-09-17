@@ -37,3 +37,20 @@ stories:
     - action: action_provide_disease_info
     - intent: affirm
     - action: action_provide_disease_info
+
+- story: Affirm after info
+  steps:
+    - intent: ask_disease_info
+      entities:
+        - disease: dust allergy
+    - action: action_provide_disease_info
+    - intent: affirm
+    - action: action_provide_disease_info
+
+
+- story: Ask about a disease
+  steps:
+  - intent: ask_disease_info
+    entities:
+      - disease: "cholera"
+  - action: action_provide_disease_info

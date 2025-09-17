@@ -2,6 +2,12 @@ version: "3.1"
 
 rules:
 
+- rule: Respond to greeting
+  steps:
+  - intent: greet
+  - action: action_provide_disease_info
+
+
 - rule: Provide disease information
   steps:
   - intent: ask_disease_info
@@ -43,3 +49,10 @@ rules:
   steps:
   - intent: deny
   - action: action_provide_disease_info
+
+
+- rule: Say goodbye when user says bye or goodbye
+  steps:
+  - intent: goodbye
+  - action: action_provide_disease_info
+

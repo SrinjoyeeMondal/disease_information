@@ -172,3 +172,163 @@ nlu:
     - asdf
     - I don't know
     - random text
+
+- intent: ask_disease_info
+  examples: |
+    - Tell me about [dust allergy](disease)
+    - I want to know about [drug allergy](disease)
+    - Give me information about [food allergy](disease)
+    - Explain [pollen allergy](disease)
+    - Tell about [insect allergy](disease)
+    - What is [skin-contact allergy](disease)
+    - Information about [cholera](disease)
+    - What is [malaria](disease)
+    - Tell about [dengue](disease)
+    - Tell me about [gastric problems](disease)
+    - Tell me about [migraine](disease)
+    - Tell me about [cancer](disease)
+    - Tell me about [UTI](disease)
+    - Tell me about [covid 19](disease)
+    - Tell me about [chronic](disease)
+
+# SYMPTOMS
+- intent: ask_symptoms
+  examples: |
+    - Symptoms
+    - What are the symptoms?
+    - Tell me the symptoms
+
+# PREVENTION
+- intent: ask_prevention
+  examples: |
+    - Prevention
+    - How to prevent?
+    - Tell me prevention tips
+
+# TREATMENT
+- intent: ask_treatment
+  examples: |
+    - Treatment
+    - How to treat it?
+    - Give me treatment info
+
+# AFFIRM / DENY
+- intent: affirm
+  examples: |
+    - yes
+    - sure
+    - of course
+    - ok
+
+- intent: deny
+  examples: |
+    - no
+    - not now
+    - maybe later 
+
+
+- synonym: dust allergy
+  examples: |
+    - dust
+    - dustallergy
+    - dust-allergy
+
+- synonym: drug allergy
+  examples: |
+    - drugallergy
+    - drug-allergy
+    - medicine allergy
+
+- synonym: food allergy
+  examples: |
+    - foodallergy
+    - food-allergy
+
+- synonym: pollen allergy
+  examples: |
+    - pollenallergy
+    - pollen-allergy
+
+- synonym: insect allergy
+  examples: |
+    - insectallergy
+    - insect-allergy
+    - bug allergy
+
+- synonym: skin-contact allergy
+  examples: |
+    - skin allergy
+    - skin contact allergy
+    - skincontactallergy
+
+- synonym: cholera
+  examples: |
+    - cholra
+    - kolera
+
+- synonym: malaria
+  examples: |
+    - maleriya
+    - malarya
+
+- synonym: dengue
+  examples: |
+    - dangue
+    - dengi
+
+- synonym: gastric
+  examples: |
+    - gastric problems
+    - gastricproblems
+    - gastric issues
+    - gas problem
+
+- synonym: migraine
+  examples: |
+    - migrane
+    - head ache
+    - headache migraine
+
+- synonym: cancer
+  examples: |
+    - tumour
+    - tumor
+    - carcinoma
+
+- synonym: uti
+  examples: |
+    - urinary tract infection
+    - urinary infection
+    - urine infection
+
+- synonym: covid 19
+  examples: |
+    - coronavirus
+    - covid19
+    - corona virus
+    - covid
+
+- synonym: chronic
+  examples: |
+    - chronic disease
+    - long-term disease
+    - chronic illness
+
+# Lookup table to strengthen entity extraction
+- lookup: disease
+  examples: |
+    - cholera
+    - typhoid
+    - chronic kidney disease
+    - food poisoning
+    - vitamin D deficiency
+    - dust allergy
+    - drug allergy
+    - food allergy
+    - pollen allergy
+    - insect allergy
+    - skin contact allergy
+    - gastric problems
+    - covid
+    - chronic disease
+     

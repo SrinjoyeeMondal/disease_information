@@ -134,14 +134,26 @@ class ActionProvideDiseaseInfo(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
+
         disease = tracker.get_slot("disease")
+        last_intent = tracker.latest_message.get("intent", {}).get("name")
+
+        #  Handle greetings
+        if last_intent == "greet":
+            dispatcher.utter_message(text="Hi! I’m your health assistant. Please tell me what disease you’d like to know about.")
+            return []
+
+        #  Handle goodbye separately
+        if last_intent == "goodbye":
+            dispatcher.utter_message(text="Goodbye! Take care.")
+            return []
 
         if not disease:
             dispatcher.utter_message(text="Please specify a disease name.")
             return []
 
         disease_lower = disease.lower()
-        last_intent = tracker.latest_message.get("intent", {}).get("name")
+        
 
         # Unknown disease
         if disease_lower not in DISEASE_DATA:
